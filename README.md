@@ -7,7 +7,7 @@ Demonstration of Kafka Connect Couchbase.
 * Docker
 * bash
 * curl 
-* Java JDK 1.8 or later
+* Java JDK 1.8
 
 ## Set up Couchbase Server
 
