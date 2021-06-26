@@ -36,6 +36,10 @@ While you're waiting for Kafka start, move on to the next step.
 
 ## Set up connect-cli tool
 
+0. Install gradle 5 : follow instruction in the url below:
+   
+    https://linuxize.com/post/how-to-install-gradle-on-ubuntu-18-04/
+
 1. Download and build the `connect-cli` tool:
 
        ./setup-connect-cli.sh
