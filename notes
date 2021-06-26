@@ -19,6 +19,7 @@ sudo systemctl stop  couchbase-server
 https://forums.couchbase.com/t/couchbase-kafka-connector-issue/24631/13
 
 ## couch documentation
-
 https://docs.couchbase.com/server/current/install/startup-shutdown.html#start-stop-linux
 
+## pykafka and others benchmarking
+http://activisiongamescience.github.io/2016/06/15/Kafka-Client-Benchmarking/#:~:text=kafka%2Dpython%20aims%20to%20replicate,to%20maintains%20%22pythonic%22%20api.&text=Pykafka%20was%20the%20only%20python,kafka%2Dpython%20is%20less%20important.
