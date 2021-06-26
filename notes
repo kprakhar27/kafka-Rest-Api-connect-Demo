@@ -6,6 +6,10 @@ kill -9 $(lsof -t -i tcp:11210)
 sudo lsof -i -P -n | grep 11210
 
 
+## remove all docker containers
+ docker rm -f $(docker ps -aq)
+
+
 ## error when http error connection  while running
 ## kafka.sh. ---> retart docker 
 sudo service docker restart
