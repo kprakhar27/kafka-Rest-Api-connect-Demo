@@ -89,7 +89,7 @@ If all goes well, the connector will populate the `connect-demo` topic with docu
 
 Let's write those documents back to Couchbase in the `dest` bucket.
 
-    connect-cli run cb-sink < config/sink-1-dest.properties    
+    connect-cli run cb-sink < config/sink-1.properties    
 
 ## Experiment with other configurations
 
