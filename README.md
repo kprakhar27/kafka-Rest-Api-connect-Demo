@@ -19,6 +19,10 @@ for info on why you need the python wrapper for ksql, see link below:
 
 [why you need the python wrapper for ksql_REST_API](https://www.confluent.io/blog/machine-learning-with-python-jupyter-ksql-tensorflow/#:~:text=The%20result%20of%20such%20a,and%20other%20widespread%20Python%20libraries.)
 
+* Connector-ksql integration
+
+[connector-ksql integration](https://docs.ksqldb.io/en/latest/concepts/connectors/)
+
 
 ## Prerequisites
 
