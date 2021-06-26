@@ -1,5 +1,6 @@
 # important commands
 # kill ports and related errors
+# url : https://stackoverflow.com/questions/37971961/docker-error-bind-address-already-in-use
 fuser -k 11210/tcp
 kill -9 $(lsof -t -i tcp:11210)
 sudo lsof -i -P -n | grep 11210
@@ -13,4 +14,11 @@ sudo service docker stop
 ## restarting couchbase
 sudo systemctl start couchbase-server
 sudo systemctl stop  couchbase-server
+
+# kafka connector issue: u need to run couchbase in docker : go to url for explanation
+https://forums.couchbase.com/t/couchbase-kafka-connector-issue/24631/13
+
+## couch documentation
+
+https://docs.couchbase.com/server/current/install/startup-shutdown.html#start-stop-linux
 
