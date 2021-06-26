@@ -1,6 +1,24 @@
-# kafka-connect-demo
+## kafka-connect-demo
 
 Demonstration of Kafka Connect Couchbase.
+## For data scientist (additional info after installation/setup)
+
+To log on to the ksql server after setting up kafka, couchdb and command line tool
+
+`docker exec -it ksql-cli ksql http://ksql-server:8088 `
+
+Or use the python wrapper
+
+` pip install ksql `
+
+* for more info on ksql:
+
+[python wrapper for the KSQL REST API](https://github.com/bryanyang0528/ksql-python)
+
+for info on why you need the python wrapper for ksql, see link below:
+
+[why you need the python wrapper for ksql_REST_API](https://www.confluent.io/blog/machine-learning-with-python-jupyter-ksql-tensorflow/#:~:text=The%20result%20of%20such%20a,and%20other%20widespread%20Python%20libraries.)
+
 
 ## Prerequisites
 
