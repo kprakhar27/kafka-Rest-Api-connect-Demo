@@ -81,8 +81,7 @@ If the "connect" Kafka container has finished starting up, the tool should repor
 Kafka connectors are created and controlled by POSTing JSON to an HTTP server.
 The `connect-cli` tool handles that for us, and also handles converting property files to JSON. 
  
-    connect-cli run cb-source < config/source-1-default-schema.properties
-
+    connect-cli run cb-source < config/source-2-raw-json.properties
 To watch the connector service log file:
 
     docker logs -f connect
