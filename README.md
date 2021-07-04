@@ -23,6 +23,11 @@ for info on why you need the python wrapper for ksql, see link below:
 
 [connector-ksql integration](https://docs.ksqldb.io/en/latest/concepts/connectors/)
 
+### KSQL-Connect Integration [To do]
+
+[ksql Connect integration](https://docs.confluent.io/5.4.2/ksql/docs/developer-guide/ksql-connect.html)
+
+
 
 ## Prerequisites
 
