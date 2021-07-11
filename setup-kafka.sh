@@ -1,32 +1,37 @@
-#!/bin/sh
-
 set -e
 set -x
 
 ################
 
-echo "*** Downloading and expanding the Kafka Connect Couchbase distribution..."
+# echo "*** building kafka-rest api up kafka..."
 
-VERSION=3.4.5
+# # #VERSION=3.4.5
+# # mkdir -p tmp
 
-mkdir -p tmp
-mkdir -p docker/couchbase-connector/tmp
+#mkdir -p docker/rest-connector/tmp
 
-curl https://packages.couchbase.com/clients/kafka/${VERSION}/kafka-connect-couchbase-${VERSION}.zip \
-     > tmp/kafka-connect-couchbase-${VERSION}.zip
+# # git clone https://github.com/llofberg/kafka-connect-rest.git tmp/rest-connector
+# # #unzip -o tmp/kafka-connect-rest.zip -d tmp/
 
-unzip -o tmp/kafka-connect-couchbase-${VERSION}.zip -d tmp
-
-cp tmp/kafka-connect-couchbase-${VERSION}/kafka-connect-couchbase-${VERSION}.jar \
-   docker/couchbase-connector/tmp/kafka-connect-couchbase.jar
+# # #cp -r tmp/kafka-connect-rest \
+# # cd tmp/rest-connector
+# # mvn clean install && \
+# # cd examples/spring/gs-rest-service && \
+# # mvn clean install 
+# # # && \
+# # # cd .. && \
+# # # cp ../../kafka-connect-rest-plugin/target/kafka-connect-rest-plugin-*-shaded.jar jars/ && \
+# # # cp ../../kafka-connect-transform-from-json/kafka-connect-transform-from-json-plugin/target/kafka-connect-transform-from-json-plugin-*-shaded.jar jars/ && \
+# # # cp ../../kafka-connect-transform-add-headers/target/kafka-connect-transform-add-headers-*-shaded.jar jars/ && \
+# # # cp ../../kafka-connect-transform-velocity-eval/target/kafka-connect-transform-velocity-eval-*-shaded.jar jars/    
 
 ################
 
-echo "*** Building the custom extensions JAR..."
+# echo "*** Kafkaka connector is jdbc ..."
 
 mvn package -f custom-extensions/pom.xml
 cp custom-extensions/target/custom-extensions-1.0-SNAPSHOT.jar \
-       docker/couchbase-connector/tmp/custom-extensions.jar
+       docker/rest-connector/tmp/custom-extensions.jar
 
 ################
 

@@ -65,7 +65,7 @@ services:
       SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: 'zookeeper:2181'
 
   connect:
-    build: couchbase-connector
+    build: rest-connector
     hostname: connect
     container_name: connect
     depends_on:
