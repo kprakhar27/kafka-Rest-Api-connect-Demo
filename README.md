@@ -15,7 +15,7 @@ This helps to connect to a Rest-Api and collect data continuously in kafka. Furt
 
 ## Set up Rest Api connector and Network
 
-1. Start the rest Api cnnector Docker container:
+1. Start the rest Api connector Docker container and network:
 
        ./setup-kafka-restApi.sh
        ./setup-network.sh
