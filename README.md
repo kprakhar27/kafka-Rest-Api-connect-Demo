@@ -1,32 +1,9 @@
-## kafka-connect-demo
 
-Demonstration of Kafka Connect Couchbase.
-## For data scientist (additional info after installation/setup)
+## Rest-API Demo for 
+Based in the work of [kafka-connect-demo](https://github.com/l0n3star/kafka-connect-demo). The only changes made was to use [kafka Rest connector](https://github.com/llofberg/kafka-connect-rest.git) instead of couchbase connector which was used in the original demo. The source configuration was changed to relflect connection to a url (and not a couchbase source).
 
-To log on to the ksql server after setting up kafka, couchdb and command line tool
-
-`docker exec -it ksql-cli ksql http://ksql-server:8088 `
-
-Or use the python wrapper
-
-` pip install ksql `
-
-* for more info on ksql:
-
-[python wrapper for the KSQL REST API](https://github.com/bryanyang0528/ksql-python)
-
-for info on why you need the python wrapper for ksql, see link below:
-
-[why you need the python wrapper for ksql_REST_API](https://www.confluent.io/blog/machine-learning-with-python-jupyter-ksql-tensorflow/#:~:text=The%20result%20of%20such%20a,and%20other%20widespread%20Python%20libraries.)
-
-* Connector-ksql integration
-
-[connector-ksql integration](https://docs.ksqldb.io/en/latest/concepts/connectors/)
-
-### KSQL-Connect Integration [To do]
-
-[ksql Connect integration](https://docs.confluent.io/5.4.2/ksql/docs/developer-guide/ksql-connect.html)
-
+## Aim
+This helps to connect to a Rest-Api and collect data continuously in kafka. Further analysis can be done on the collected data.
 
 
 ## Prerequisites
@@ -121,3 +98,32 @@ After modifying the source code for `CustomSourceHandler` (located under the `cu
 When you're done with the demo, remove the Docker containers:
 
     ./cleanup.sh
+    
+## kafka-connect-demo
+
+Demonstration of Kafka Connect Couchbase.
+## For data scientist (additional info after installation/setup)
+
+To log on to the ksql server after setting up kafka, couchdb and command line tool
+
+`docker exec -it ksql-cli ksql http://ksql-server:8088 `
+
+Or use the python wrapper
+
+` pip install ksql `
+
+* for more info on ksql:
+
+[python wrapper for the KSQL REST API](https://github.com/bryanyang0528/ksql-python)
+
+for info on why you need the python wrapper for ksql, see link below:
+
+[why you need the python wrapper for ksql_REST_API](https://www.confluent.io/blog/machine-learning-with-python-jupyter-ksql-tensorflow/#:~:text=The%20result%20of%20such%20a,and%20other%20widespread%20Python%20libraries.)
+
+* Connector-ksql integration
+
+[connector-ksql integration](https://docs.ksqldb.io/en/latest/concepts/connectors/)
+
+### KSQL-Connect Integration [To do]
+
+[ksql Connect integration](https://docs.confluent.io/5.4.2/ksql/docs/developer-guide/ksql-connect.html)
