@@ -63,11 +63,7 @@ To watch the connector service log file:
 
 If all goes well, the connector will populate the `connect-demo` topic with documents from the `travel-sample` bucket.
 
-## Start a Sink connector
 
-Let's write those documents back to Couchbase in the `dest` bucket.
-
-    connect-cli run cb-sink < config/sink-1.properties    
 
 ## Experiment with other configurations
 
@@ -92,9 +88,6 @@ When you're done with the demo, remove the Docker containers:
 
     ./cleanup.sh
     
-## kafka-connect-demo
-
-Demonstration of Kafka Connect Couchbase.
 ## For data scientist (additional info after installation/setup)
 
 To log on to the ksql server after setting up kafka, couchdb and command line tool
