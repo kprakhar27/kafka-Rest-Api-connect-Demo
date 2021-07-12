@@ -1,6 +1,6 @@
 
 ## Rest-API Demo for 
-Based in the work of [kafka-connect-demo](https://github.com/l0n3star/kafka-connect-demo). The only changes made was to use [kafka Rest connector](https://github.com/llofberg/kafka-connect-rest.git) instead of couchbase connector which was used in the original demo. The source configuration was changed to relflect connection to a url (and not a couchbase source).
+Based on the work of [kafka-connect-demo](https://github.com/l0n3star/kafka-connect-demo). The only changes made was to use [kafka Rest connector](https://github.com/llofberg/kafka-connect-rest.git) instead of couchbase connector which was used in the original demo. The source configuration was changed to relflect connection to a url (and not a couchbase source).
 
 ## Aim
 This helps to connect to a Rest-Api and collect data continuously in kafka. Further analysis can be done on the collected data.
