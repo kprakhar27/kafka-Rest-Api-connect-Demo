@@ -13,19 +13,12 @@ This helps to connect to a Rest-Api and collect data continuously in kafka. Furt
 * curl 
 * Java JDK 1.8
 
-## Set up Couchbase Server
+## Set up Rest Api connector and Network
 
-1. Start the Couchbase Docker container:
+1. Start the rest Api cnnector Docker container:
 
-       ./setup-couchbase.sh
-
-2. Visit http://localhost:8091/ and configure the cluster with username `Administrator` and password `password`.
-Optional: Configure disk, memory & services; reduce the Data service memory quota to 512 MB and disable all other services.
-
-3. In the Couchbase web UI, go to the "Buckets" section and follow the link to add sample buckets. Add the `travel-sample` bucket.
-
-4. Return to the "Buckets" section and add two more buckets, `dest` and `dest-routes`.
-Reduce the bucket memory quota to 100 MB. Enable "Flush" in the "Advanced Settings" section.
+       ./setup-kafka-restApi.sh
+       ./setup-network.sh
 
 ## Set up Kafka
 
