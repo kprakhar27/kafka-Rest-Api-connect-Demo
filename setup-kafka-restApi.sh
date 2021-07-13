@@ -5,11 +5,13 @@ set -x
 
 ################
 
-echo "*** building kafka-rest api  kafka..."
+echo "*** kafka-rest api  kafka set up ..."
 
 
 ##############
 ### set up required folder
+echo "*** setting up the directory ..."
+
 mkdir -p tmp
 
 mkdir -p docker/rest-connector/tmp
