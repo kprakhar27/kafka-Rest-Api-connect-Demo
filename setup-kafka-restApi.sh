@@ -15,24 +15,15 @@ mkdir -p tmp
 
 mkdir -p docker/rest-connector/tmp
 
-# git clone https://github.com/llofberg/kafka-connect-rest.git tmp/rest-connector
+git clone https://github.com/llofberg/kafka-connect-rest.git tmp/rest-connector
 
 cd tmp/rest-connector
-# mvn clean install && \
-# cd examples/spring/gs-rest-service && \
-# mvn clean install 
+mvn clean install && \
+cd examples/spring/gs-rest-service && \
+mvn clean install 
 
 
-###########################################
-## clean this
-# && \
-# cd .. && \
-# cp ../../kafka-connect-rest-plugin/target/kafka-connect-rest-plugin-*-shaded.jar jars/ && \
-# cp ../../kafka-connect-transform-from-json/kafka-connect-transform-from-json-plugin/target/kafka-connect-transform-from-json-plugin-*-shaded.jar jars/ && \
-# cp ../../kafka-connect-transform-add-headers/target/kafka-connect-transform-add-headers-*-shaded.jar jars/ && \
-# cp ../../kafka-connect-transform-velocity-eval/target/kafka-connect-transform-velocity-eval-*-shaded.jar jars/    
 
-################
 
 echo "*** copying jars to the docker file ..."
 
