@@ -3,15 +3,15 @@ set -x
 
 ################
 
-# echo "*** building kafka-rest api up kafka..."
+echo "*** building kafka-rest api up kafka..."
 
 # # #VERSION=3.4.5
-# # mkdir -p tmp
+mkdir -p tmp
 
 #mkdir -p docker/rest-connector/tmp
 
-# # git clone https://github.com/llofberg/kafka-connect-rest.git tmp/rest-connector
-# # #unzip -o tmp/kafka-connect-rest.zip -d tmp/
+git clone https://github.com/llofberg/kafka-connect-rest.git tmp/rest-connector
+unzip -o tmp/kafka-connect-rest.zip -d tmp/
 
 # # #cp -r tmp/kafka-connect-rest \
 # # cd tmp/rest-connector
