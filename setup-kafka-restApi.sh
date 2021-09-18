@@ -5,37 +5,34 @@ set -x
 
 ################
 
-echo "*** kafka-rest api  kafka set up ..."
+echo "*** building kafka-rest api  kafka..."
 
+#VERSION=3.4.5
 
-##############
-### set up required folder
-echo "*** setting up the directory ..."
-
+######################################3
+### uncomment out this once
 mkdir -p tmp
 
 mkdir -p docker/rest-connector/tmp
-##############
 
-
-############## clone ret api a and build ##############
-echo "*** cloning the kafka rest connector files and building it ..."
-
-
-git clone https://github.com/llofberg/kafka-connect-rest.git tmp/rest-connector
+# git clone https://github.com/llofberg/kafka-connect-rest.git tmp/rest-connector
 
 cd tmp/rest-connector
-mvn clean install && \
-cd examples/spring/gs-rest-service && \
-mvn clean install 
-#######################################################
+# mvn clean install && \
+# cd examples/spring/gs-rest-service && \
+# mvn clean install 
 
 
+###########################################
+## clean this
+# && \
+# cd .. && \
+# cp ../../kafka-connect-rest-plugin/target/kafka-connect-rest-plugin-*-shaded.jar jars/ && \
+# cp ../../kafka-connect-transform-from-json/kafka-connect-transform-from-json-plugin/target/kafka-connect-transform-from-json-plugin-*-shaded.jar jars/ && \
+# cp ../../kafka-connect-transform-add-headers/target/kafka-connect-transform-add-headers-*-shaded.jar jars/ && \
+# cp ../../kafka-connect-transform-velocity-eval/target/kafka-connect-transform-velocity-eval-*-shaded.jar jars/    
 
-
-########################## copying the files to the docker/rest-connector/tmp #######################################################
-############ once copied the file will be copied from docker/rest-connector/tmp into docker, 
-###########  by the docker file in docker/rest-connector folder
+################
 
 echo "*** copying jars to the docker file ..."
 
@@ -53,5 +50,10 @@ cp kafka-connect-transform-add-headers/target/kafka-connect-transform-add-header
 cp kafka-connect-transform-from-json/kafka-connect-transform-from-json-plugin/target/kafka-connect-transform-from-json-plugin-*-shaded.jar \
         ../../docker/rest-connector/tmp
 
-##############################################################################################################################
+################
 
+
+
+# cd docker
+# docker-compose build
+# docker-compose up -d
