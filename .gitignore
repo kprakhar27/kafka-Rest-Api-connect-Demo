@@ -5,3 +5,4 @@ tmp/
 *.iml
 *.ipr
 *.iws
+config/source-2-raw-json.properties
